@@ -1,0 +1,151 @@
+<!--
+ OpenSL ES audio output for Sonivox EAS synthesizer in real time
+ Copyright (C) 2015 Pedro López-Cabanillas <plcl@users.sf.net>
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:text="AudioManager Configuration:"/>
+
+    <RadioGroup
+        android:id="@+id/radioButtons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2" >
+        
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Piano"
+            android:id="@+id/rb1"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Organ"
+            android:id="@+id/rb2" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Strings"
+            android:id="@+id/rb3" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trumpet"
+            android:id="@+id/rb4" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sax"
+            android:id="@+id/rb5" />
+        
+    </RadioGroup>
+    
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/radioButtons"
+        android:layout_below="@+id/radioButtons"
+        android:layout_marginTop="14dp"
+        android:text="C"/>
+
+    <Button
+        android:id="@+id/buttonD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonC"
+        android:layout_alignBottom="@+id/buttonC"
+        android:layout_toEndOf="@+id/buttonC"
+        android:text="D"/>
+
+    <Button
+        android:id="@+id/buttonE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonD"
+        android:layout_alignBottom="@+id/buttonD"
+        android:layout_toEndOf="@+id/buttonD"
+        android:text="E"/>
+
+    <Button
+        android:id="@+id/buttonF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonE"
+        android:layout_alignBottom="@+id/buttonE"
+        android:layout_toEndOf="@+id/buttonE"
+        android:text="F"/>
+
+    <Button
+        android:id="@+id/buttonG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonF"
+        android:layout_alignBottom="@+id/buttonF"
+        android:layout_toEndOf="@+id/buttonF"
+        android:text="G"/>
+    
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonG"
+        android:layout_alignBottom="@+id/buttonG"
+        android:layout_toEndOf="@+id/buttonG"
+        android:text="A"/>
+    
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonA"
+        android:layout_alignBottom="@+id/buttonA"
+        android:layout_toEndOf="@+id/buttonA"
+        android:text="B"/>
+    
+    <Button
+        android:id="@+id/buttonC2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonB"
+        android:layout_alignBottom="@+id/buttonB"
+        android:layout_toEndOf="@+id/buttonB"
+        android:text="C'"/>
+        
+
+</RelativeLayout>
